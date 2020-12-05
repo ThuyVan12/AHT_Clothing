@@ -1,0 +1,54 @@
+@container-width: 1318px;
+
+//
+// color
+//
+@color-text-header:#242424;
+@color-nav: #fff;
+@color-nav-ul: #000000;
+@color-banner-text:#212121;
+@color-button-slick: #000000;
+@color-footer: #323335;
+@color-footer-h3: #333;
+@color-footer-network: #676767;
+@color-button-buy-homepage: #ff97cd;
+@color-btn-catalog: #0d0d0d;
+@color-nextpre:#959595;
+@color-price: #676767 ;
+@color-instock: #8f8f8f;
+@color-text-detail: #acacac;
+@color-size: #323232;
+@color-content-accordion: #706e6f;
+@color-line-accordion: #9e9e9e;
+
+//
+// Icons
+// ------------------------------------------
+@icons-angle-down: "\f107";
+@icons-angle-up: "\f106";
+@icons-contact: "\f095";
+@icons-account: "\f007";
+
+//
+// mixin
+//
+.minxin-line-awesome(@content:@icons-angle-up , @font-family:"Line Awesome Free", @font-weight: 900) { 
+    content: @content;
+    font-family: @font-family; 
+    font-weight: @font-weight;
+}
+.mixin-set-a(@font-size: 14px, @color: #0000, @padding:6px ,@line-height: 30px) {
+    font-size: @font-size;
+    color: @color;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding-left: @padding;
+    line-height: @line-height;
+}
+.mixin-next-pre{
+    background: none;
+    font-size: 13px;
+    width: auto;
+    color: @color-nextpre;
+}
+

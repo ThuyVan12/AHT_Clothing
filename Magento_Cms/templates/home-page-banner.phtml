@@ -1,0 +1,22 @@
+<div class="home-page__banner">
+    <?php
+     echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')
+                 ->setBlockId('banner')->toHtml();
+     ?>
+     <div class="home-page__banner-content">
+        <div class="home-page__banner-content-text">
+            <?php
+                echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')
+                            ->setBlockId('banner-text')->toHtml(); 
+            ?>
+        </div>
+        <div class="hope-page__banner-content-btn">
+            <a href="#">
+                <?php 
+                    echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')
+                                ->setBlockId('banner-button')->toHtml();
+                ?>
+            </a>
+        </div>
+     </div>
+</div>

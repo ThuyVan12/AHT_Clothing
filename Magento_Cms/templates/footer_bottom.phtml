@@ -1,0 +1,90 @@
+<div class="footer-test-container-desktop">
+   <div class="footer-test-container-order">
+        <?php 
+            echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')
+                        ->setBlockId('footer-order')->toHtml(); 
+        ?>
+   </div>
+    <div class="footer-test-container-customer">
+        <?php 
+            echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')
+                        ->setBlockId('footer-address')->toHtml(); 
+        ?>
+        <div class="footer-test-container-customer-tex">
+        <?php 
+            echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')
+                        ->setBlockId('footer-address-text')->toHtml(); 
+        ?>
+        </div>
+   </div>
+   <div class="footer-test-container-features">
+   <?php 
+            echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')
+                        ->setBlockId('footer-feature')->toHtml(); 
+        ?>
+        <div class="footer-test-container-features-content">
+            <div class="footer-test-container-features-item">
+                <?php
+                    echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')
+                                ->setBlockId('footer-features-faqs')->toHtml();
+                ?>
+            </div>
+            <div class="footer-test-container-features-item">
+                <?php
+                    echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')
+                                ->setBlockId('footer-features-about-us')->toHtml();
+                ?>
+            </div>
+            <div class="footer-test-container-features-item">
+                <a href="<?php echo $block->getUrl('privacy-policy-cookie-restriction-mode')?>">privacy policy</a>
+            </div>
+            <div class="footer-test-container-features-item">
+                <?php
+                    echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')
+                                ->setBlockId('footer-features-delivery') ->toHtml();
+                ?>
+            </div>
+        </div>
+   </div>
+</div>
+<div class="footer-container-mobile">
+   <div class="footer-mobile-order">
+        <?php 
+            echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')
+                    ->setBlockId('footer-order')->toHtml(); 
+        ?>
+   </div>
+
+    <div class="footer-mobile-address">
+        <?php 
+            echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')
+                        ->setBlockId('footer-address')->toHtml(); 
+        ?>
+    </div>
+
+    <div class="footer-mobile-featured">
+        <?php 
+            echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')
+                        ->setBlockId('footer-feature')->toHtml(); 
+        ?>
+    </div>
+
+   <div class="footer-mobile-features-text">
+        <?php 
+            echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')
+                        ->setBlockId('footer-address-text')->toHtml(); 
+        ?>
+   </div>
+   
+    <div class="footer-mobile-network">
+    <?php 
+            echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer-mxh')->toHtml();
+        ?>
+    </div>
+
+    <div class="footer-mobile-coppy">
+    <?php 
+            echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer-mobile-coppy')->toHtml();
+        ?>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="footer-top">
+    <div class="footer_network">
+        <?php 
+            echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer-mxh')->toHtml();
+        ?>
+    </div>
+    <div class="footer_sign-up">
+        <p> 
+            SIGN UP TO OUR NEWSLETTER
+        </p>
+        <button><a href=" <?php echo $block->getUrl('customer/account/login'); ?>">SIGN UP</a></button>
+    </div>
+</div>
+
+

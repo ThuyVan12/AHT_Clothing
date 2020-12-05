@@ -1,0 +1,15 @@
+<div class="header-top">
+    <?php
+        echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')
+                                ->setBlockId('header-top-right')->toHtml();
+    ?>
+    <?php
+        echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')
+                                ->setBlockId('header-top-center')->toHtml();
+
+    ?>
+       <?php
+        echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')
+                                ->setBlockId('header-top-left')->toHtml();
+    ?>
+</div>

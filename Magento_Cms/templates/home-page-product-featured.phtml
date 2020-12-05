@@ -1,0 +1,76 @@
+<div class="home-page__featured-product-title">
+    <?php 
+       echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('featured-ptoduct-text')->toHtml();
+    ?>
+</div>
+<div class="home-page__featured-product">
+    <?php for($i=1 ; $i<=3 ;$i++) { ?>
+         <div class="home-page__featured-product-item">
+            <?php 
+                  echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('product-featured-'.$i)->toHtml();
+            ?>
+            <div class="home-page__featured-product-content">
+                 <div class="home-page__featured-product-content-text">
+                    <?php
+                        echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('product-featured-'.$i.'-text')->toHtml();
+                    ?>
+                 </div>
+                 <div class="home-page__featured-product-content-button">
+                    <?php
+                        echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('product-featured-'.$i.'-button')->toHtml();
+                    ?>
+                 </div>
+            </div>
+         </div>
+    <?php } ?>
+</div> 
+
+<script>
+    require([
+        'jquery',
+        'slick'
+    ], function ($) {
+        $(document).ready(function () {
+            $('.home-page__featured-product').slick({
+                slidesToShow: 3,
+                responsive: [
+                    {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                    },
+                    {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        speed: 300,
+                        infinite: true,
+                        arrows: true,
+                    }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow:1,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            arrows: false,
+                        }
+                    },
+                    {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        speed: 300,
+                        infinite: true,
+                        arrows: false,
+                    }
+                    }
+                ]
+            });
+        });
+    });
+</script> 

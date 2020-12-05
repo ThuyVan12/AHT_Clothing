@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name = "page.wrapper">
+            <container name = "home.page.main.banner" htmlTag = "section" htmlClass="home-page-main-banner" before="main.content">
+                <block class= "Magento\Framework\View\Element\Template" name ="block.home.page.main.banner" template = "Magento_Cms::home-page-banner.phtml" />
+            </container>
+        </referenceContainer>
+        <referenceContainer name = "main">
+            <container name = "home.page.feautured.product" htmlTag="section" htmlClass="home-page-featured-product">
+                <block class=  "Magento\Framework\View\Element\Template" name = "block.home.page.product.featured" template="Magento_Cms::home-page-product-featured.phtml" />
+                <block class=  "Magento\Framework\View\Element\Template" name = "block.home.page.trending.now" template="Magento_Cms::home-page-trending-now.phtml" />
+                 <block class="Magento\Framework\View\Element\Template" name='home.page.footer.mxh' template = 'Magento_Cms::footer_network.phtml' after="-" />
+            </container>
+        </referenceContainer>
+    </body>
+</page>
